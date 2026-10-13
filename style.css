@@ -1,0 +1,663 @@
+/* =====================================
+   PENGATURAN DASAR
+===================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: #f4efe4;
+  color: #3d352b;
+  line-height: 1.6;
+
+  /* Animasi saat mode berubah */
+  transition: background-color 0.4s, color 0.4s;
+}
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+#judul {
+  background-color: #263f36;
+  color: #f8f1df;
+  text-align: center;
+  padding: 28px 20px;
+  border-bottom: 4px solid #c29a55;
+
+  transition: background-color 0.4s, color 0.4s;
+}
+
+#judul h1 {
+  margin: 0 0 20px;
+  font-size: 30px;
+  letter-spacing: 1px;
+  background-color: transparent;
+  color: #f8f1df;
+}
+
+
+/* =====================================
+   NAVIGASI
+===================================== */
+
+#navigasi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+#navigasi a {
+  color: #f8f1df;
+  text-decoration: none;
+  padding: 9px 17px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+
+  transition: 0.3s;
+}
+
+#navigasi a:hover {
+  color: #d4af6a;
+  border-color: #d4af6a;
+}
+
+
+/* =====================================
+   TOMBOL MODE
+===================================== */
+
+#tombol-gelap {
+  background-color: #c29a55;
+  color: #2f2923;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Georgia, "Times New Roman", serif;
+  transition: 0.3s;
+}
+
+#tombol-gelap:hover {
+  background-color: #e0bd75;
+  transform: translateY(-2px);
+}
+
+
+/* =====================================
+   KONTEN UTAMA
+===================================== */
+
+main {
+  width: 90%;
+  max-width: 1050px;
+  margin: 35px auto;
+}
+
+section h2,
+aside h2 {
+  color: #263f36;
+  transition: color 0.4s;
+}
+
+
+/* =====================================
+   KOTAK PENCARIAN
+===================================== */
+
+#cari {
+  width: 100%;
+  padding: 13px 15px;
+  margin: 10px 0 25px;
+
+  background-color: #fffdf7;
+  color: #3d352b;
+
+  border: 1px solid #c9b58b;
+  border-radius: 7px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+
+  transition: 0.4s;
+}
+
+#cari:focus {
+  outline: none;
+  border-color: #263f36;
+  box-shadow: 0 0 5px rgba(38, 63, 54, 0.3);
+}
+
+#cari::placeholder {
+  color: #8a7d69;
+}
+
+
+/* =====================================
+   ARTICLE
+===================================== */
+
+article {
+  background-color: #fffdf7;
+  padding: 24px;
+  margin-bottom: 28px;
+
+  border: 1px solid #d6c7a7;
+  border-left: 5px solid #c29a55;
+  border-radius: 8px;
+
+  box-shadow: 0 4px 12px rgba(70, 55, 35, 0.12);
+
+  transition:
+    background-color 0.4s,
+    color 0.4s,
+    border-color 0.4s,
+    box-shadow 0.4s;
+}
+
+article:hover {
+  box-shadow: 0 7px 18px rgba(70, 55, 35, 0.18);
+}
+
+article h3 {
+  color: #263f36;
+  font-size: 23px;
+  margin-top: 0;
+
+  border-bottom: 1px solid #d4af6a;
+  padding-bottom: 8px;
+
+  transition: color 0.4s;
+}
+
+
+/* =====================================
+   GAMBAR
+===================================== */
+
+figure {
+  margin: 18px 0;
+}
+
+figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+  border: 4px solid #eee5d2;
+  border-radius: 7px;
+
+  transition: 0.4s;
+}
+
+figure img:hover {
+  transform: scale(1.01);
+}
+
+figcaption {
+  color: #756957;
+  font-size: 14px;
+  margin-top: 8px;
+  font-style: italic;
+
+  transition: color 0.4s;
+}
+
+
+/* =====================================
+   BAGIAN TOMBOL AKSI
+===================================== */
+
+.aksi {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.aksi button {
+  padding: 9px 14px;
+  border: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  transition: 0.3s;
+}
+
+
+/* Tombol suka */
+
+.btn-suka {
+  background-color: #ead5c5;
+  color: #814c38;
+}
+
+.btn-suka:hover {
+  background-color: #dfb99f;
+  transform: translateY(-2px);
+}
+
+
+/* Tombol baca */
+
+.btn-baca {
+  background-color: #263f36;
+  color: #f8f1df;
+}
+
+.btn-baca:hover {
+  background-color: #38594b;
+  transform: translateY(-2px);
+}
+
+
+/* Jumlah suka */
+
+.jumlah-suka {
+  color: #9a712f;
+}
+
+
+/* =====================================
+   TEKS TERSEMBUNYI
+===================================== */
+
+.sembunyi {
+  display: none;
+}
+
+
+/* =====================================
+   SIDEBAR
+===================================== */
+
+aside {
+  background-color: #e8e0cd;
+  padding: 22px;
+  margin: 30px 0;
+
+  border: 1px solid #c9b58b;
+  border-radius: 8px;
+
+  transition:
+    background-color 0.4s,
+    color 0.4s,
+    border-color 0.4s;
+}
+
+aside h2 {
+  margin-top: 0;
+}
+
+aside ul {
+  padding-left: 20px;
+}
+
+aside li {
+  margin: 8px 0;
+}
+
+aside a {
+  color: #38594b;
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+aside a:hover {
+  color: #9a712f;
+  text-decoration: underline;
+}
+
+
+/* =====================================
+   SECTION TENTANG
+===================================== */
+
+#Tentang {
+  background-color: #fffdf7;
+  padding: 25px;
+  margin-bottom: 30px;
+
+  border: 1px solid #d6c7a7;
+  border-radius: 8px;
+
+  box-shadow: 0 4px 10px rgba(70, 55, 35, 0.1);
+
+  transition:
+    background-color 0.4s,
+    color 0.4s,
+    border-color 0.4s;
+}
+
+#Tentang h2 {
+  margin-top: 0;
+  color: #263f36;
+}
+
+.wrapper {
+  background-color: #f4efe4;
+  border-left: 5px solid #c29a55;
+
+  padding: 12px 17px;
+  border-radius: 4px;
+
+  transition:
+    background-color 0.4s,
+    border-color 0.4s;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+#kontak {
+  background-color: #263f36;
+  color: #f8f1df;
+  text-align: center;
+
+  padding: 30px 20px;
+
+  border-top: 4px solid #c29a55;
+
+  transition:
+    background-color 0.4s,
+    color 0.4s;
+}
+
+#kontak h2 {
+  color: #f8f1df;
+  margin-top: 0;
+}
+
+.alamat {
+  font-style: normal;
+}
+
+.alamat a {
+  color: #d4af6a;
+  text-decoration: none;
+}
+
+.alamat a:hover {
+  text-decoration: underline;
+}
+
+#kontak p {
+  margin-bottom: 0;
+  color: #d8cfbd;
+}
+
+
+/* ==================================================
+   ================================================
+               MODE GELAP
+   ================================================
+================================================== */
+
+body.gelap {
+  background-color: #171923;
+  color: #e7e9f0;
+}
+
+
+/* Header mode gelap */
+
+body.gelap #judul {
+  background-color: #0d0f18;
+  color: #f2f4ff;
+  border-bottom-color: #8b7cf6;
+}
+
+body.gelap #judul h1 {
+  color: #f2f4ff;
+}
+
+
+/* Navigasi mode gelap */
+
+body.gelap #navigasi a {
+  color: #dfe2ff;
+}
+
+body.gelap #navigasi a:hover {
+  color: #a99cff;
+  border-color: #8b7cf6;
+}
+
+
+/* Tombol mode terang */
+
+body.gelap #tombol-gelap {
+  background-color: #8b7cf6;
+  color: #ffffff;
+}
+
+body.gelap #tombol-gelap:hover {
+  background-color: #a99cff;
+}
+
+
+/* Judul section */
+
+body.gelap section h2,
+body.gelap aside h2 {
+  color: #a99cff;
+}
+
+
+/* Kotak pencarian */
+
+body.gelap #cari {
+  background-color: #232633;
+  color: #f1f2f7;
+  border-color: #45495b;
+}
+
+body.gelap #cari:focus {
+  border-color: #8b7cf6;
+  box-shadow: 0 0 6px rgba(139, 124, 246, 0.4);
+}
+
+body.gelap #cari::placeholder {
+  color: #999dad;
+}
+
+
+/* Article */
+
+body.gelap article {
+  background-color: #222531;
+  color: #e7e9f0;
+
+  border-color: #414556;
+  border-left-color: #8b7cf6;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+body.gelap article:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+}
+
+body.gelap article h3 {
+  color: #a99cff;
+  border-bottom-color: #6255c7;
+}
+
+
+/* Gambar */
+
+body.gelap figure img {
+  border-color: #3b3e4c;
+}
+
+body.gelap figcaption {
+  color: #aeb2c0;
+}
+
+
+/* Tombol suka */
+
+body.gelap .btn-suka {
+  background-color: #533b46;
+  color: #ffb6c8;
+}
+
+body.gelap .btn-suka:hover {
+  background-color: #694653;
+}
+
+
+/* Tombol baca */
+
+body.gelap .btn-baca {
+  background-color: #6255c7;
+  color: white;
+}
+
+body.gelap .btn-baca:hover {
+  background-color: #7468dd;
+}
+
+
+/* Jumlah suka */
+
+body.gelap .jumlah-suka {
+  color: #c5baff;
+}
+
+
+/* Sidebar */
+
+body.gelap aside {
+  background-color: #20232e;
+  border-color: #414556;
+}
+
+body.gelap aside h2 {
+  color: #a99cff;
+}
+
+body.gelap aside a {
+  color: #bdb5ff;
+}
+
+body.gelap aside a:hover {
+  color: #e0aaff;
+}
+
+
+/* Tentang */
+
+body.gelap #Tentang {
+  background-color: #222531;
+  color: #e7e9f0;
+  border-color: #414556;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.gelap #Tentang h2 {
+  color: #a99cff;
+}
+
+body.gelap .wrapper {
+  background-color: #292c38;
+  border-left-color: #8b7cf6;
+}
+
+
+/* Footer */
+
+body.gelap #kontak {
+  background-color: #0d0f18;
+  color: #e7e9f0;
+  border-top-color: #8b7cf6;
+}
+
+body.gelap #kontak h2 {
+  color: #f2f4ff;
+}
+
+body.gelap .alamat a {
+  color: #bdb5ff;
+}
+
+body.gelap #kontak p {
+  color: #999dad;
+}
+
+
+/* =====================================
+   RESPONSIVE / TAMPILAN HP
+===================================== */
+
+@media (max-width: 600px) {
+
+  main {
+    width: 94%;
+    margin: 25px auto;
+  }
+
+  #judul {
+    padding: 22px 15px;
+  }
+
+  #judul h1 {
+    font-size: 25px;
+  }
+
+  #navigasi {
+    flex-direction: column;
+  }
+
+  #navigasi a,
+  #tombol-gelap {
+    width: 100%;
+    text-align: center;
+  }
+
+  article {
+    padding: 18px;
+  }
+
+  article h3 {
+    font-size: 20px;
+  }
+
+  figure img {
+    width: 100%;
+  }
+
+  .aksi {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .aksi button {
+    width: 100%;
+  }
+
+  #Tentang {
+    padding: 18px;
+  }
+
+  aside {
+    padding: 18px;
+  }
+}
